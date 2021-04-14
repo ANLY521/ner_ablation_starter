@@ -5,7 +5,10 @@ from util import read_ner_sents
 from nltk.tag.crf import CRFTagger
 
 
-#TODO create subclass of CRFTagger
+#TODO 1 create subclass of CRFTagger
+# only overwrite the method _get_features
+# your version of _get_features should inherit the features
+# from the parent and add word shape features
 
 
 def main(train_file, dev_file):
@@ -17,17 +20,19 @@ def main(train_file, dev_file):
         if example:
             train_data.append([token.split('\t') for token in example])
 
+
+
     print("training")
-    # TODO: instantiate your class and train
+    # TODO 2: instantiate your class and train
 
 
     dev_sents = read_ner_sents(dev_file)
     print("writing output")
 
     with open("mytagger_output.tsv", 'w') as pred_file:
-        # TODO: write your outputs
         for sent in dev_sents:
-            # TODO: predict, then write your outputs so you can evaluate with wnuteval.py
+            # TODO 3: predict, then write your outputs
+            # use the tab-separated format required for wnuteval.py
             pass
 
 
