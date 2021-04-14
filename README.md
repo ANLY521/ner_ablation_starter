@@ -20,7 +20,7 @@ Example usage:
 
 `python wnuteval.py my_predictions.tsv`
 
-## ner_eval.py
+## Lab 1: ner_eval.py
 
 Loads WNUT data and uses `nltk`'s `ne_chunk` to predict labels for each sentence.
 HINT: requires part-of-speech tagging and conversion between tree and conll formats.
@@ -66,6 +66,8 @@ data. Train on train and write development set results on dev for four condition
 * Base + your feature 1
 * Base + your feature 2
 * All-in (Base + feature 1 + feature 2)
+
+**Neither new feature can be the wordshape feature added in lab!**
 
 Report your entity-level results in the table in Results. (Use `wnuteval.py`)
 `python ner_ablate.py --train_file emerging.train.conll --dev_file emerging.dev.conll`

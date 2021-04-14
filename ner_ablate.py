@@ -66,6 +66,7 @@ def main(train_file, dev_file):
 
     # TODO 1: Write two additional feature functions and complete the all_in function
     # refer to class lectures to get ideas of good features for NER
+    # do NOT use the word shape feature from lab
 
     # TODO 2: Train a new CRFTagger with each combination of feature functions (see README)
     # HINT: see CRFTagger's init kwarg 'feature_func', easier than the subclass used in the lab
