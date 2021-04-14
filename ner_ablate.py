@@ -64,10 +64,18 @@ def main(train_file, dev_file):
 
     dev_sents = read_ner_sents(dev_file)
 
-    # A function can be assigned to a variable - useful for simple looping
+    # TODO 1: Write two additional feature functions and complete the all_in function
+    # refer to class lectures to get ideas of good features for NER
+
+    # TODO 2: Train a new CRFTagger with each combination of feature functions (see README)
+    # HINT: see CRFTagger's init kwarg 'feature_func', easier than the subclass used in the lab
+    # A function can be treated as a variable in Python
     condition_to_func = {"base": base_features, "all_in": all_in}
     for cond, func in condition_to_func.items():
         print(f"Training tagger for condition {cond}")
+
+        # TODO 3: Write each set of results to an output file
+        # you will evaluate using wnuteval.py and write up your results in the README
 
 
 
@@ -76,10 +84,10 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--train_file", type=str,
-                        default="../emerging_entities_17/wnut17train.conll",
+                        default="emerging_entities_17/wnut17train.conll",
                         help="wnut tsv file including annotations")
     parser.add_argument("--dev_file", type=str,
-                        default="../emerging_entities_17/emerging.dev.conll",)
+                        default="emerging_entities_17/emerging.dev.conll",)
 
     args = parser.parse_args()
 

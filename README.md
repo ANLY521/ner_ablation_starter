@@ -65,7 +65,7 @@ data. Train on train and write development set results on dev for four condition
 * Base features (provided in starter code)
 * Base + your feature 1
 * Base + your feature 2
-* All-in
+* All-in (Base + feature 1 + feature 2)
 
 Report your entity-level results in the table in Results. (Use `wnuteval.py`)
 `python ner_ablate.py --train_file emerging.train.conll --dev_file emerging.dev.conll`
