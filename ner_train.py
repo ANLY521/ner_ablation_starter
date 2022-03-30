@@ -42,10 +42,10 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--train_file", type=str,
-                        default="../emerging_entities_17/wnut17train.conll",
+                        default="emerging_entities_17/wnut17train.conll",
                         help="wnut tsv file including annotations")
     parser.add_argument("--dev_file", type=str,
-                        default="../emerging_entities_17/emerging.dev.conll",)
+                        default="emerging_entities_17/emerging.dev.conll",)
 
     args = parser.parse_args()
 
